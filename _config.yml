@@ -1,6 +1,7 @@
-title: Your awesome title
-description: My awesome site
+title: Codioso Blog
+description: Collection of coding snippets and ideas
 permalink: /:slugified_categories/:title/
+safe: true
 
 date_format: "%b %-d, %Y"
 
