@@ -1,10 +1,13 @@
 title: Codioso Blog
 description: Collection of coding snippets and ideas
+baseurl: "/blog"
+url: "http://codiosodev.github.io"
 permalink: /:slugified_categories/:title/
 safe: true
 
 date_format: "%b %-d, %Y"
 
+include: ['_pages']
 exclude:
   - "package*.json"
   - "*.config.js"
