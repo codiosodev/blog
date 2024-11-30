@@ -8,6 +8,7 @@ safe: true
 
 navbar-links:
   About Me: "aboutme"
+  My Posts: "postlist"
 
 ################
 # --- Logo --- #
@@ -43,7 +44,7 @@ social-network-links:
 #  whatsapp: 1234567
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
-  linkedin: eeluso
+  linkedin: in/codioso
 #  xing: yourname
 #  stackoverflow: "1234567/yourname"
 #  snapchat: yourname
