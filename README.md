@@ -38,3 +38,8 @@ If you want to start creating posts and pages, we've included the
 
 Includes configuration for deploying to [Netlify](https://www.netlify.com/) and
 [GitHub Pages](https://pages.github.com/) (via GitHub Actions).
+
+
+https://github.com/taniarascia/startjekyll
+template:
+https://github.com/daattali/beautiful-jekyll
