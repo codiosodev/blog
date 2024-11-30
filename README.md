@@ -1,45 +1,139 @@
-# Jekyll Starter
+[![CI](https://img.shields.io/badge/Github%20Pages-passing-gold.svg?logo=github)](ci)
+[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
+[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%204.3.2-green.svg)](https://jekyllrb.com/)
+[![Jekyll](https://img.shields.io/badge/gem%20version-3.2.33-blue.svg)](gem)
+<a href="https://jekyll-themes.com/byanko55/jekyll-theme-satellite">
+  <img
+    src="https://img.shields.io/badge/featured%20on-JT-red.svg"
+    height="20"
+    alt="Jekyll Themes Shield"
+  />
+</a>
 
-> Starting point for Jekyll sites using [Tailwind CSS](https://tailwindcss.com/)
-and [Alpine.js](https://github.com/alpinejs/alpine/).
+# Satellite🛰️ - Jekyll blog theme
+An emotional and adorable blog theme powered by ***Jekyll***. 
 
-[![Use this template](https://img.shields.io/badge/template-Generate-green?style=for-the-badge)](https://github.com/mloberg/jekyll-starter/generate)
-[![Unlicense](https://img.shields.io/badge/license-Unlicense-blue?style=for-the-badge)](https://choosealicense.com/licenses/unlicense/)
+Live demo is available [here](https://byanko55.github.io)
 
-## Getting Started
+![Demo Page](https://i.ibb.co/h1QF06V/demo.webp)
 
-You'll need [Ruby](https://www.ruby-lang.org/en/), [Bundler](https://bundler.io/),
-and [Node.js](https://nodejs.org/en/) installed. Then install build dependencies
-with
+### Light Mode
+![Demo Page-light](https://i.ibb.co/DtDPCpR/white.webp)
 
-    npm install
+### Dark Mode
+![Demo Page-dark](https://i.ibb.co/BjsrWg2/dark.webp)
 
-_Tip_: Be sure to commit the generated `package-lock.json` and `Gemfile.lock` files.
+### Fresh and Attractive Design
+<p>
+<img src="https://i.ibb.co/4NwrTyj/image-2.webp" height="400px" align="center"/>
+<img src="https://i.ibb.co/WvyBzkL/Animation.gif" height="400px" align="center"/>
+</p>
 
-Then to build and serve the dev site, run
+<br></br>
 
-    npm start
+## Features
 
-## What's Included
-
-This is not a Jekyll theme. It's a starting point to create a website using
-[Jekyll](https://jekyllrb.com/), [Tailwind CSS](https://tailwindcss.com/), and
-[Alpine.js](https://github.com/alpinejs/alpine/). The layout includes almost
-nothing, allowing you to start building right away instead of having to remove
-code you won't use.
-
-If you want to start creating posts and pages, we've included the
-[Jekyll::Compose](https://github.com/jekyll/jekyll-compose) plugin.
-
-    bundle exec jekyll page "My New Page"
-    bundle exec jekyll post "My New Post"
-
-## Deploying
-
-Includes configuration for deploying to [Netlify](https://www.netlify.com/) and
-[GitHub Pages](https://pages.github.com/) (via GitHub Actions).
+* Comment System using *giscus*
+* Copy contents of Code Block
+* Dark/Light Theme
+* Google Analytics
+* Hierarchical Categorization
+* Mobile friendly design
+* Related Posts
+* RSS/Sitemap support
+* Search Post by Title or Tags
+* Syntax Highlighter (*highlight.js*)
+* Table of Contents
+* Visitor Counter (*goatcounter*)
 
 
-https://github.com/taniarascia/startjekyll
-template:
-https://github.com/daattali/beautiful-jekyll
+## Installation
+
+There are two ways to setup this theme:
+<br></br>
+
+### Method 1: Build from source (Recommended)
+Fork [this repository](https://github.com/byanko55/jekyll-theme-satellite) or download the [source](https://github.com/byanko55/jekyll-theme-satellite/releases) as a zip. 
+
+If you use as destination a repository named USERNAME.github.io, then your url will be https://USERNAME.github.io/.
+
+Otherwise (let's say `myblog`), you need to edit the '*baseurl*' parameter in `_config.yml`. In this case, the root page will be served to "https://USERNAME.github.io/myblog/".
+
+```yml
+# set baseurl as "/<repo-name>". ex) baseurl: /myblog
+baseurl: /myblog
+```
+<br></br>
+
+
+### Method 2: Utilize Gem package
+Create a clean site directory (Follow the **Instruction 1~4** described [here](https://jekyllrb.com/docs/)).
+
+The following materials are redundant, so remove them.
+* index.markdown
+* about.markdown
+<br></br>
+
+Then, add this line to your Jekyll site's `Gemfile`:
+
+```bash
+gem "jekyll-theme-satellite"
+```
+
+You need to replace the initial `_config.yml` file with the [prepared one](https://github.com/byanko55/jekyll-theme-satellite/blob/master/docs/_config.yml).
+<br></br>
+
+### Modify your site setting
+
+Now fill in the **site variable** such as blog name, profile image, and social accounts in `_config.yml`.
+
+```yml
+title: Example.com
+description: "Satellite - jekyll blog theme"
+logo_img: "/assets/img/favicon.webp"
+profile_img: "/assets/img/profile.jpg"
+
+# Social Links
+email: example@gmail.com
+github_username: github
+twitter_username: twitter
+instagram_username: instagram
+linkedin_username: linkedin
+facebook_username: facebook
+```
+
+
+### Run site locally
+
+From the site root directory, install the dependencies:
+
+```
+bundle install
+```
+
+
+Start a Jekyll service.
+
+```
+bundle exec jekyll serve
+```
+
+Now open [http://localhost:4000](http://localhost:4000) in your browser.
+<br></br>
+
+## Customizing
+
+You can find useful manuals for customizing your site from the below table:
+
+|||
+|---|---|
+|Posting guidelines|[link](https://github.com/byanko55/jekyll-theme-satellite/blob/master/docs/Posting%20Guide.md)|
+|Enabling ***comment system***|[link](https://github.com/byanko55/jekyll-theme-satellite/blob/master/docs/Comment%20System.md)|
+|Enabling ***Visitor counter***|[link](https://github.com/byanko55/jekyll-theme-satellite/blob/master/docs/Visitor%20Counter.md)|
+
+## Contribution
+If you would like to report a bug or request a new feature, please open [an issue](https://github.com/byanko55/jekyll-theme-satellite/issues) We are open to any kind of feedback or collaboration.
+<br></br>
+
+## License
+© 2024 *Yankos*. This theme is available as open source under the terms of the [MIT License](https://opensource.org/license/mit/).
