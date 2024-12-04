@@ -1,4 +1,5 @@
 ---
+layout: page
 title: "Showing posts"
 tags:
     - user manual
@@ -15,11 +16,14 @@ This section deals with the step-by-step process of how to write and publish pos
     {{ post.title }}
 {% endfor %} 
 
+{{ content }}
+
+{% assign posts = paginator.posts | default: site.posts %}
+
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
   <li class="post-preview">
     <article>
-
       {%- capture thumbnail -%}
         {% if post.thumbnail-img %}
           {{ post.thumbnail-img }}
@@ -33,7 +37,6 @@ This section deals with the step-by-step process of how to write and publish pos
         {% endif %}
       {% endcapture %}
       {% assign thumbnail=thumbnail | strip %}
-
       {% if site.feed_show_excerpt == false %}
       {% if thumbnail != "" %}
       <div class="post-image post-image-normal">
@@ -42,18 +45,15 @@ This section deals with the step-by-step process of how to write and publish pos
         </a>
       </div>
       {% endif %}
-      {% endif %}
-
+      {% endif %}    
       <a href="{{ post.url | absolute_url }}">
         <h2 class="post-title">{{ post.title | strip_html }}</h2>
-
         {% if post.subtitle %}
           <h3 class="post-subtitle">
           {{ post.subtitle | strip_html }}
           </h3>
         {% endif %}
       </a>
-
       {% if post.author %}
         <span>By <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %}
@@ -61,7 +61,6 @@ This section deals with the step-by-step process of how to write and publish pos
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
         Posted on {{ post.date | date: date_format }}
       </p>
-
       {% if thumbnail != "" %}
       <div class="post-image post-image-small">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
@@ -69,7 +68,6 @@ This section deals with the step-by-step process of how to write and publish pos
         </a>
       </div>
       {% endif %}
-
       {% unless site.feed_show_excerpt == false %}
       {% if thumbnail != "" %}
       <div class="post-image post-image-short">
@@ -78,7 +76,6 @@ This section deals with the step-by-step process of how to write and publish pos
         </a>
       </div>
       {% endif %}
-
       <div class="post-entry">
         {% assign excerpt_length = site.excerpt_length | default: 50 %}
         {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
@@ -88,7 +85,6 @@ This section deals with the step-by-step process of how to write and publish pos
         {% endif %}
       </div>
       {% endunless %}
-
       {% if site.feed_show_tags != false and post.tags.size > 0 %}
       <div class="blog-tags">
         <span>Tags:</span>
@@ -102,7 +98,6 @@ This section deals with the step-by-step process of how to write and publish pos
         </ul>
       </div>
       {% endif %}
-
     </article>
   </li>
   {% endfor %}
