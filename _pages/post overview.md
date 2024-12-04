@@ -9,17 +9,7 @@ thumbnail: "/assets/img/thumbnail/sample.png"
 bookmark: true
 ---
 
-This section deals with the step-by-step process of how to write and publish posts on your site.
-
-{% for post in site.posts %} 
-    {{ post.date | date: "%b %-d, %Y" }}
-    {{ post.title }}
-{% endfor %} 
-
-{{ content }}
-
 {% assign posts = paginator.posts | default: site.posts %}
-
 <ul class="posts-list list-unstyled" role="list">
   {% for post in posts %}
   <li class="post-preview">
